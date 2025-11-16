@@ -26,7 +26,7 @@ Esta librería es mi **caja de herramientas** personal:
 | Categoría | Herramienta / Tecnología |
 |------------|--------------------------|
 | Lenguaje | C (C99) |
-| Compilador | GCC / Clang |
+| Compilador | GCC / CC / Clang |
 | Estilo | Norminette (estándar de 42) |
 | Depuración | Valgrind / GDB |
 | Build System | Makefile |
@@ -106,7 +106,7 @@ int main(void)
 **2. Compilar tu proyecto con la librería:**
 ```bash
 # Forma manual
-gcc -Wall -Wextra -Werror main.c -L. -lft -I./includes -o mi_programa
+cc -Wall -Wextra -Werror main.c -L. -lft -I./includes -o mi_programa
 
 # O mejor, crea un Makefile que enlace libft.a
 ```
@@ -120,7 +120,7 @@ LIBFT_DIR = my_library
 SRCS = main.c utils.c
 OBJS = $(SRCS:.c=.o)
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror -I$(LIBFT_DIR)/includes
 
 all: $(LIBFT) $(NAME)
